@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Blog do Felipe</title>
 </head>
 <body>
     <h1>Biografia de Felipe</h1>
-    <p>Gostaria de conhecer Felipe Chaves Boll?</p>
-    <button id="sim">Sim</button>
-    <button id="nao">Não</button>
+    <h3>Gostaria de conhecer <strong>Felipe Chaves Boll</strong>?</h3>
+    <button id="sim"><strong>Sim</strong></button>
+    <button id="nao"><Strong>Não</Strong></button>
     <br>
     <br>
     <p id = "biografia"></p>
@@ -18,7 +18,6 @@
     <script>
         const botaoS = document.getElementById("sim")
         const botaoN = document.getElementById("nao")
-        const imagem = document.getElementById
         const texto = document.getElementById("biografia");
         botaoS.addEventListener('click', function(){
             const imagem = document.createElement("img")
@@ -27,7 +26,7 @@
 
             document.body.appendChild(imagem)
 
-            texto
+            texto.innerHTML = "<p>Felipe Chaves Boll nascido em Cascavel, Parana em 28 de julho de 2009.</p>"
         })
 
         botaoN.addEventListener('click', function(){
