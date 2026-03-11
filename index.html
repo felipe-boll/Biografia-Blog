@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -8,29 +8,51 @@
 </head>
 
 <body>
-    <h1>Blog Do Felipe</h1>
-    <h3>Gostaria de conhecer <strong>Felipe Chaves Boll</strong>?</h3>
-    <p>Felipe Chaves Boll nascido em Cascavel, Parana em 28 de julho de 2009.
-        <br>Estuda no Instituto Federal do Parana campus Cascavel cursando o 3°
-        ano de Informatica, tambem trabalha no escritório de contabilidade Araucaria.
-    </p>
-    <br>
-    <img src="felipe.jpg" width="200">
-    <br>
+    <nav class="navbar">
+        <div class="nav">Blog do Felipe</div>
+    </nav>
+
     <div class="layout">
-        <aside class="barra-lateral">
-            <h3>No tempo livre gosta de: </h3>
-            <ul>
-                <li>Jogar League of Legends.</li>
-                <li>Cozinhar.</li>
-                <li>Assistir séries, filmes e animes.</li>
-                <li>Adora escutar
-                    musicas de muitos generos (preferência ao Rock).</li>
-            </ul><br></p>
-        </aside>
+        <main class="conteudo">
+            <div class="primeiro-bloco">
+                <div class="foto">
+                    <img src="felipe.jpg">
+                </div>
+            
+                <section class="inicio">
+                    <h1>Geral</h1>
+                    <p>Felipe Chaves Boll nascido em Cascavel, Parana em 28 de julho de 2009.
+                        <br>Estuda no Instituto Federal do Parana campus Cascavel cursando o 3°
+                        ano de Informatica, tambem trabalha no escritório de contabilidade Araucaria.
+                    </p>
+
+                </section>
+            </div>
+    </main>
+
+
+    <aside class="sidebar">
+        <h3>Tópicos</h3>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+        </ul>
+    </aside>
     </div>
 
+
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background-color: #982598;
+            font-size: 50px;
+            color: #FFD400;
+            display: flex;
+            padding: 1rem 5%;
+        }
+
         .layout {
             display: flex;
             flex-direction: row-reverse;
@@ -39,11 +61,37 @@
             padding: 20px;
         }
 
-        .barra-lateral {
-            width: 250px;
-            background-color: #4f4f4f;
-            padding: 15px;
-            border-radius: 8px;
+        .conteudo {
+            flex: 3;
+            background: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .sidebar {
+            flex: 1;
+            background: #f9f9f9;
+            padding: 20px;
+            border: 3px solid #2c3e50;
+        }
+
+        .primeiro-bloco {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        .primeiro-bloco .foto {
+            flex: 1;
+        }
+
+        .primeiro-bloco .inicio {
+            flex: 2;
+        }
+
+        .foto img {
+            height: 350px;
+            border-radius: 10px;
         }
     </style>
 
